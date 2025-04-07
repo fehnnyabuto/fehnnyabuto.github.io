@@ -1,7 +1,880 @@
-{% extends 'master.html' %}
+<!-- {% extends 'master.html' %}
 {% load static %}
 
 {% block content %}
     <P></P>
-{% endblock %}
+{% endblock %} -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Fehn Nyabuto</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  {% load static %}
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+        <img src="assets/img/logo.webp" alt="">
+        <h1 class="sitename">Fehn Nyabuto</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Ventures</a></li>
+          {% comment %} <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> {% endcomment %}
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="header-social-links">
+        <a target="_blank" href="https://www.linkedin.com/in/fehn-nyabuto-ba6484264/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a target="_blank" href="https://github.com/fehnnyabuto" class="github"><i class="bi bi-github"></i></a>
+        <a href="mailto:nyabutofehn@gmail.com" class="envelope"><i class="bi bi-envelope"></i></a>
+        <a target="_blank" href="https://wa.me/0729101312" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Start Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center content">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h2>Project Manager</h2>
+            <h2 class="title-01">Quality Analyst</h2>
+            <h2 class="title-01">Systems Developer</h2>
+            <p class="lead">Process Optimization, Continuous Improvement, Operational Enhancement, Enterprise development</p>
+            <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
+              <a href="#portfolio" class="btn btn-primary">View My Work</a>
+              <a href="#contact" class="btn btn-outline">Let's Connect</a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+              <div class="stat-item">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Years Experience</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">20+</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5+</span>
+                <span class="stat-label">Happy Clients</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image">
+              <img src="{% static 'img/profile/my-pic.png' %}" alt="Portfolio Hero Image" class="img-fluid" data-aos="zoom-out" data-aos-delay="300">
+              <div class="shape-1"></div>
+              <div class="shape-2"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- Start About Section -->
+    <section id="about" class="about section light-background">
+
+      <!-- Start Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>I am a dedicated, results-driven individual, passionate about leveraging technology to drive innovation, enhance processes, and ensure high-quality standards. I am skilled in managing projects, optimizing workflows, and driving continuous improvement.</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
+            <div class="about-image">
+              <img src="{% static 'img/profile/my-pic.png' %}" alt="Profile Image" class="img-fluid rounded-4">
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <span class="subtitle">About Me</span>
+
+              <h2>Project Manager &amp; Solutions Developer</h2>
+
+              <p class="lead mb-4"> Business card </p>
+
+              <div class="personal-info">
+                <div class="row g-4">
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Name</span>
+                      <span class="value">Fehn Nyabuto</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Phone</span>
+                      <span class="value">+254 729101312</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Experience</span>
+                      <span class="value">2+ Years</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Email</span>
+                      <span class="value">nyabutofehn@gmail.com</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Occupation</span>
+                      <span class="value">Project Manager</span>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Nationality</span>
+                      <span class="value">Kenyan</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="signature mt-4">
+                <div class="signature-image">
+                  <img src="assets/img/misc/signature-1.webp" alt="" class="img-fluid">
+                </div>
+                <div class="signature-info">
+                  {% comment %} <h4>Fehn Nyabuto</h4> {% endcomment %}
+                  <div class="view-btn btn-cv" data-aos="fade-up" data-aos-delay="300">
+                    <a target="_blank" href="{% static 'files/Fehn Nyabuto_Resume 2025.pdf' %}" class="btn btn-primary">Download CV</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End About Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4 skills-animation">
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-box">
+              <h3>Project Management</h3>
+              <p>Agile, Stakeholder Engagement, Scope Management, Negotiation, Kanban, Jira, Asana, Trello</p>
+              <span class="text-end d-block">90%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-box">
+              <h3>Quality Assurance (QA)</h3>
+              <p>Change advisory, Version Control, BUCs and Functional, Performance & Vulnerability Testing</p>
+              <span class="text-end d-block">80%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-box">
+              <h3>Python</h3>
+              <p>Django, Flask, Jupyter, Fast API</p>
+              <span class="text-end d-block">70%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-box">
+              <h3>JavaScript</h3>
+              <p>Angular, Next.js </p>
+              <span class="text-end d-block">50%</span>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        {% comment %} <p>Find a list of my qualifications below in form of a roadmap highlighting my journey in the tech world</p> {% endcomment %}
+        <p>Find a list of my qualifications below </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-12">
+            <div class="resume-wrapper">
+              <div class="resume-block" data-aos="fade-up">
+                <h2>Work Experience</h2>
+                <p class="lead">Vast experience in Project Management with a strong background in Systems Development.</p>
+
+                <div class="timeline">
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-left">
+                      <h4 class="company">Kenya Revenue Authority (KRA)</h4>
+                      <span class="period">Feb, 2025 - Current</span>
+                      <span>Contract</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">Systems Developer & Quality Analyst</h3>
+                      <p class="description">Python-Django Web Development and Java-Springboot Systems Development</p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-left">
+                      <h4 class="company">Zynamis</h4>
+                      <span class="period">Nov, 2024 - Feb, 2025</span>
+                      <p>Contract</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">Project Manager & Systems Developer </h3>
+                      <p class="description"> Started off as a Systems Developer reporting to the Senior Project Manager. Was Promoted to <i>Project Lead</i> to oversee the development of multiple projects. Successfully managed the team to deliver projects on time and to customer satisfaction.
+                      </p>
+                      <ul>
+                        <li>Managing a junior agile team of 7 in the design and development of websites, web apps and mobile apps. </li>
+                        <li>Designing and Managing project workflows, documentation, sprints and dashboards. </li>
+                        <li>Delegating and Supervising  tasks between members of the design, front-end and back-end project teams.</li>
+                        <li>Maintaining clear flow of communication between the different project stakeholders.</li>
+                        <li>Backend development and performing quality assurance checks on the software under development.</li>
+                      </ul>
+                      <p></p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-left">
+                      <h4 class="company">Kenya Power</h4>
+                      <span class="period">Dec, 2023 - Nov, 2024</span>
+                      <p>Contract</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">Project Manager & Systems Developer</h3>
+                      <p class="description">Hired as a <i>Systems Developer</i>, excelled in Project Management ang got promoted to a <i>Junior Project Manager</i> role within 2 months, overseeing 3+ major company projects running simultaneously. </p>
+                      <ul>
+                        <li>Conducted user requirements gathering, documented software processes, and trained end-users on system functionalities.</li>
+                        <li>Streamlined both Factory and User Acceptance Testing, performed continuous product quality checks, and championed Training of Trainers (ToT) programs.</li>
+                        <li>Organized, coordinated and facilitated project progress meetings with technical teams and stakeholders.</li>
+                        <li>Developed and maintained Java-based web applications, performed system testing and troubleshooting, and created shell scripts for process automation. </li>
+                        <li>Oversaw the efficient use of project budgets.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="resume-block" data-aos="fade-up" data-aos-delay="100">
+                <h2>My Education</h2>
+
+                <div class="timeline">
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-left">
+                      <h4 class="company">Multimedia University</h4>
+                      <span class="period">2019-2023</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">Bachelor of Science in Information Technology</h3>
+                      <p class="description">Second Class Honours - Upper Division.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="resume-block" data-aos="fade-up" data-aos-delay="100">
+                <h2>Certifications</h2>
+                <p class="lead">Below is a list of certifications I have acquired over the years.</p>
+
+                <div class="timeline">
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-left">
+                      <h4 class="company">Google</h4>
+                      <span class="period">March, 2025 - Present</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">Business Intelligence</h3>
+                      <p class="description">Big Data, Data Models, ETL and Pipelines, Dashboards and Reports.</p>
+                      {% comment %} <div class="view-btn" data-aos="fade-up" data-aos-delay="300">
+                        <a target="_blank" href="{% static 'files/Fehn Nyabuto_Project Management Professional Certificate.pdf' %}" class="btn btn-primary">View Certificate</a>
+                        <a target="_blank" href="https://coursera.org/verify/professional-cert/RUUUL6YC0ZXV" class="btn btn-outline">Verify Credentials</a>
+                      </div> {% endcomment %}
+                    </div>
+                  </div>
+                  
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-left">
+                      <h4 class="company">Google</h4>
+                      <span class="period">Feb, 2024 - Dec, 2024</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">Project Management Professional (PMP)</h3>
+                      <p class="description">Agile Project Management, Scrum, Continuous Improvement, Scope Management, Change Management, Risk Management, Stakeholder Engagement, Customer Relationship Management.</p>
+                      <div class="view-btn" data-aos="fade-up" data-aos-delay="300">
+                        <a target="_blank" href="{% static 'files/Fehn Nyabuto_Project Management Professional Certificate.pdf' %}" class="btn btn-primary">View Certificate</a>
+                        <a target="_blank" href="https://coursera.org/verify/professional-cert/RUUUL6YC0ZXV" class="btn btn-outline">Verify Credentials</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-left">
+                      <h4 class="company">Google</h4>
+                      <span class="period">July, 2024 - Dec, 2024</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">IT Automation with Python</h3>
+                      <p class="description">Python Programming, Git, Troubleshooting & Debugging, Shell Scripting, IT Automation, Configuration Management, Cloud Computing, DevOps.</p>
+                      <div class="view-btn" data-aos="fade-up" data-aos-delay="300">
+                        <a target="_blank" href="{% static 'files/Fehn Nyabuto_IT Automation with Python Professional Certificate.pdf' %}" class="btn btn-primary">View Certificate</a>
+                        <a target="_blank" href="https://coursera.org/verify/professional-cert/749N7D7K0S7D" class="btn btn-outline">Verify Credentials</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-left">
+                      <h4 class="company">Oracle Univeristy</h4>
+                      <span class="period">Jan, 2024 - Aug, 2024</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">Oracle Cloud Infrastructure Generative AI Certified Professional</h3>
+                      <p class="description">Generative AI, Large Language Models (LLM), LangChain, AI Security, AI Infrastructure, Chatbot Development, Oracle Cloud, Oracle Cloud Infrastructure Generative AI Service, Application Programming Interfaces (API), SDKs, CLI.</p>
+                      <div class="view-btn" data-aos="fade-up" data-aos-delay="300">
+                        <a target="_blank" href="{% static 'files/Fehn Nyabuto_Oracle Cloud Infrastructure Generative AI Professional Certificate.pdf' %}" class="btn btn-primary">View Certificate</a>
+                        <a target="_blank" href="{% static 'files/Oracle OCI Generative AI Score Report.pdf' %}" class="btn btn-outline">Verify Credentials</a>
+                        {% comment %} jhnkdandkjxn ajk cjka  {% endcomment %}
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-left">
+                      <h4 class="company">ICT Authority & Cyber Shujaa Training</h4>
+                      <span class="period">Aug, 2024</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">Cybersecurity and Emerging Technologies Training</h3>
+                      <p class="description">Cybersecurity Tools, Cyber law, IT Security Policies & Procedures, Data Privacy Best Practices, Data Protection Act, Information Security Management.</p>
+                      <div class="view-btn" data-aos="fade-up" data-aos-delay="300">
+                        <a target="_blank" href="{% static 'files/Fehn Nyabuto_Cybersecurity and Emerging Technologies Awareness Training.pdf' %}" class="btn btn-primary">View Certificate</a>
+                        <a target="_blank" href="https://training.icta.go.ke/certificate-verification" class="btn btn-outline">Verify Credentials</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-left">
+                      <h4 class="company">Emobilis</h4>
+                      <span class="period">Aug, 2023 - July, 2024</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">Web Development</h3>
+                      <p class="description">Python Programming Language, Django, CSS, Bootstrap, APIs, Database Management, SQL, MySQL.</p>
+                      <div class="view-btn" data-aos="fade-up" data-aos-delay="300">
+                        <a target="_blank" href="{% static 'files/Fehn Nyabuto_Web Development Certificate.pdf' %}" class="btn btn-primary">View Certificate</a> 
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-left">
+                      <h4 class="company">HP Foundation</h4>
+                      <span class="period">Jan, 2024 - Aug, 2024</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-right">
+                      <h3 class="position">Customer Relationship Management</h3>
+                      <p class="description">Stakeholder Engagement, Business Branding, Customer Support, Corporate Communications.</p>
+                      <div class="view-btn" data-aos="fade-up" data-aos-delay="300">
+                        <a target="_blank" href="{% static 'files/Fehn Nyabuto_Customer Relationship Management Training Certificate.pdf' %}" class="btn btn-primary">View Certificate</a>
+                        <a target="_blank" href="#resume" class="btn btn-outline">Verify Credentials</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End Resume Section -->
+
+    <!-- Start Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Start Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>With an innovative mindset and an aim to Automate, Optimize and Scale...</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <div class="portfolio-filters-container" data-aos="fade-up" data-aos-delay="200">
+            <ul class="portfolio-filters isotope-filters">
+              <li data-filter="*" class="filter-active">All Work</li>
+              <li data-filter=".filter-web">Web Development</li>
+              <li data-filter=".filter-graphics">AI & Machine Learning</li>
+              {% comment %} <li data-filter=".filter-motion">Machine Learning</li> {% endcomment %}
+              {% comment %} <li data-filter=".filter-brand">Solutions Architecture</li> {% endcomment %}
+            </ul>
+          </div>
+
+          <div class="row g-4 isotope-container" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="{% static 'img/portfolio/incue-survey-screenshot.png' %}" class="img-fluid" alt="" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      {% comment %} <a href="{% static 'img/portfolio/incue-survey-screenshot.png' %}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a> {% endcomment %}
+                      <a href="{% static 'proj/Online Evaluation Tool.pdf' %}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">Incue</span>
+                  <h3>Online Evaluation Tool</h3>
+                  <p>Flexible online evaluation tool that enables organization-wide assessment, compliance monitoring, and continuous improvement through structured data collection & analysis.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="{% static 'img/portfolio/agripy-img.png' %}" class="img-fluid" alt="" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="{% static 'img/portfolio/agripy-img.png' %}" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
+                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">AgriPy</span>
+                  <h3>Agricultural Products Price Prediction Systems</h3>
+                  <p>Machine learning with Python, Model Training with Panda, NumPy, Jupyter</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            {% comment %} <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-motion">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="{% static 'img/portfolio/portfolio-7.webp' %}" class="img-fluid" alt="" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="{% static 'img/portfolio/portfolio-7.webp' %}" class="glightbox preview-link" data-gallery="portfolio-gallery-motion"><i class="bi bi-eye"></i></a>
+                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">Motion</span>
+                  <h3>Product Animation Reel</h3>
+                  <p>Donec ullamcorper nulla non metus auctor fringilla dapibus.</p>
+                </div>
+              </div>
+            </div> {% endcomment %}
+            <!-- End Portfolio Item -->
+
+            {% comment %} <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-brand">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="{% static 'img/portfolio/portfolio-4.webp' %}" class="img-fluid" alt="" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="{% static 'img/portfolio/portfolio-4.webp' %}" class="glightbox preview-link" data-gallery="portfolio-gallery-brand"><i class="bi bi-eye"></i></a>
+                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">Branding</span>
+                  <h3>Luxury Brand Package</h3>
+                  <p>Aenean lacinia bibendum nulla sed consectetur elit.</p>
+                </div>
+              </div>
+            </div> {% endcomment %}
+            <!-- End Portfolio Item -->
+
+            <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-web">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="{% static 'img/portfolio/evernutri-home.png' %}" class="img-fluid" alt="" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="{% static 'img/portfolio/evernutri-home.png' %}" class="glightbox preview-link" data-gallery="portfolio-gallery-web"><i class="bi bi-eye"></i></a>
+                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-"></i></a>
+                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">everNutri</span>
+                  <h3>Ecommerce Website</h3>
+                  <p>Python, HTML, CSS, SCSS, JavaScript programming languages, Django, Bootstrap frameworks and M-Pesa API.</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Portfolio Item -->
+
+            {% comment %} <div class="col-lg-6 col-md-6 portfolio-item isotope-item filter-graphics">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="{% static 'img/portfolio/portfolio-11.webp' %}" class="img-fluid" alt="" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="{% static 'img/portfolio/portfolio-11.webp' %}" class="glightbox preview-link" data-gallery="portfolio-gallery-graphics"><i class="bi bi-eye"></i></a>
+                      <a href="portfolio-details.html" class="details-link"><i class="bi bi-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <span class="category">Graphics</span>
+                  <h3>Digital Art Collection</h3>
+                  <p>Cras mattis consectetur purus sit amet fermentum.</p>
+                </div>
+              </div>
+            </div> {% endcomment %}
+            <!-- End Portfolio Item -->
+
+          </div>
+          <!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Portfolio Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Ventures</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>Driving Innovation Through Technology & Strategy</p>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <h2 class="fw-bold mb-4 servies-title">Transforming Ideas into Impactful Solutions</h2>
+            <p class="mb-4">Leveraging expertise in project management, software development, AI, and quality assurance to build solutions that drive efficiency, innovation, and growth.</p>
+            <a href="#portfolio" class="btn btn-outline-primary">See all ventures</a>
+          </div>
+          <div class="col-lg-8">
+            <div class="row g-4">
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-item">
+                  <i class="bi bi-easel icon"></i>
+                  <h3><a href="service-details.html">Project Management</a></h3>
+                  <p>Strategic Project Execution.</p>
+                </div>
+              </div>
+              <!-- End Service Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-item">
+                  <i class="bi bi-activity icon"></i>
+                  <h3><a href="service-details.html">Software Quality Assurance</a></h3>
+                  <p>Ensuring Software Excellence.</p>
+                </div>
+              </div>
+              <!-- End Service Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-item">
+                  <i class="bi bi-broadcast icon"></i>
+                  <h3><a href="service-details.html">Web Devevelopment</a></h3>
+                  <p>Innovative Web Solutions.</p>
+                </div>
+              </div>
+              <!-- End Service Item -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-item">
+                  <i class="bi bi-bounding-box-circles icon"></i>
+                  <h3><a href="service-details.html">Artificial Intelligence & Machine Learning</a></h3>
+                  <p>Intelligent Systems Design and Development.</p>
+                </div>
+              </div>
+              <!-- End Service Item -->
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Services Section -->
+
+    <!-- faq Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <div class="content" data-aos="fade-up" data-aos-delay="200">
+              <div class="section-category mb-3">Let's talk</div>
+              <h2 class="display-5 mb-4">Send me a Message to Start the Conversation</h2>
+              <p class="lead mb-4">Or find my contact details below...</p>
+
+              <div class="contact-info mt-5">
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-envelope-at me-3"></i>
+                  <span>nyabutofehn@gmail.com</span>
+                </div>
+
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-telephone me-3"></i>
+                  <span>+254 729101312</span>
+                </div>
+
+                <div class="info-item d-flex mb-4">
+                  <i class="bi bi-geo-alt me-3"></i>
+                  <span>Full-time, Hybrid, Remote</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
+              <div class="card-body p-4 p-lg-5">
+
+                <form action="forms/contact.php" method="post" class="php-email-form">
+                  <div class="row gy-4">
+
+                    <div class="col-12">
+                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    </div>
+
+                    <div class="col-12 ">
+                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                    </div>
+
+                    <div class="col-12">
+                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    </div>
+
+                    <div class="col-12">
+                      <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    </div>
+
+                    <div class="col-12 text-center">
+                      <div class="loading">Loading</div>
+                      <div class="error-message"></div>
+                      <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                      <button type="submit" class="btn btn-submit w-100">Submit Message</button>
+                    </div>
+
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- /Contact Section -->
+
+  </main>
+
+  
+  {% block content %}
     
+  {% endblock %}
+    
+
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright </span> <strong class="px-1 sitename">fehnnyabuto</strong> <span> All Rights Reserved.</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a target="_blank" href="https://www.linkedin.com/in/fehn-nyabuto-ba6484264/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a target="_blank" href="https://github.com/fehnnyabuto" class="github"><i class="bi bi-github"></i></a>
+        <a target="_blank" href="mailto:nyabutofehn@gmail.com" class="email"><i class="bi bi-envelope"></i></a>
+        <a target="_blank" href="https://wa.me/0729101312" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+     
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
